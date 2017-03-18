@@ -11,21 +11,17 @@ import {
   Text,
   View
 } from 'react-native';
+import ListViewDemo from "./src/View/ListViewDemo"
+import Header from "./src/View/Header";
 
 export default class ProjetoBiologia extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
-        </Text>
+      <View>
+        <Header headerText={'Biologia'}  />
+        <View style={styles.container}>
+          <ListViewDemo />
+        </View>
       </View>
     );
   }
@@ -33,7 +29,7 @@ export default class ProjetoBiologia extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 2,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
