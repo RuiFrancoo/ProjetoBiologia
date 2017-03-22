@@ -17,7 +17,6 @@ const styles = StyleSheet.create({
 
 class ListItemDemo extends React.Component {
 
-
   render() {
     return (
         <View style={styles.row}>
