@@ -4,6 +4,7 @@ import {
   Text,
   View,
   Button,
+  StyleSheet,
 } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import ExampleComponent from './SearchBar';
@@ -17,10 +18,12 @@ class HomeScreen extends React.Component {
   render() {
     const { navigate } = this.props.navigation;
     return (
-      <View>
-         <ExampleComponent />
-        <ListViewDemo />
-      </View>
+     
+        <View style={styles.container}>
+            <ExampleComponent />
+            <ListViewDemo />
+        </View>
+    
     );
   }
 }
@@ -42,5 +45,16 @@ const SimpleApp = StackNavigator({
   Home: { screen: HomeScreen },
   Product: { screen: ProductScreen },
 });
+
+
+const styles = StyleSheet.create({ 
+  container: { 
+    flex: 1,
+    justifyContent: 'center',  
+    alignItems: 'center', 
+    backgroundColor: '#F5FCFF', 
+  }, 
+}); 
+ 
 
 AppRegistry.registerComponent('ProjetoBiologia', () => SimpleApp);
