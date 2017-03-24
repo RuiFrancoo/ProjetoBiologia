@@ -10,9 +10,10 @@ export default class ExampleComponent extends Component {
         onFocus={() => console.log('On Focus')}
         onBlur={() => console.log('On Blur')}
         placeholder={'Search...'}
-        autoCorrect={false}
+        autoCorrect={true}
         padding={5}
         returnKeyType={'search'}
+
       />
     );
   }

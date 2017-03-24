@@ -18,12 +18,17 @@ class HomeScreen extends React.Component {
   render() {
     const { navigate } = this.props.navigation;
     return (
-     
-        <View style={styles.container}>
-            <ExampleComponent />
-            <ListViewDemo />
-        </View>
-    
+     <View style={{  
+            flex: 1,
+            backgroundColor: '#F5FCFF',
+          }}>
+              <ExampleComponent />
+        <View style={styles.container}> 
+
+          <ListViewDemo /> 
+          
+        </View> 
+     </View>
     );
   }
 }
@@ -53,6 +58,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',  
     alignItems: 'center', 
     backgroundColor: '#F5FCFF', 
+
   }, 
 }); 
  

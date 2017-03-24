@@ -26,6 +26,7 @@ class ListViewDemo extends React.Component {
         style={styles.container}
         dataSource={this.state.dataSource}
         renderRow={(data) => <ListItemDemo title={data}></ListItemDemo>}
+        automaticallyAdjustContentInsets={false}
       />
     );
   }
