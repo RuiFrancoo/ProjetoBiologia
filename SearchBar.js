@@ -14,7 +14,9 @@ export default class ExampleComponent extends Component {
         padding={5}
         returnKeyType={'search'}
 
+         
       />
     );
   }
 }
+

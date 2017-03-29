@@ -13,19 +13,20 @@ import ListViewDemo from './src/View/ListViewDemo';
 
 class HomeScreen extends React.Component {
   static navigationOptions = {
-    title: 'Welcome',
+   title: 'Welcome',
+    header: {
+        style: { backgroundColor: '#9ccc65'},
+        titleStyle: { color: '#fafafa'},
+    }
   };
   render() {
     const { navigate } = this.props.navigation;
     return (
-     <View style={{  
-            flex: 1,
-            backgroundColor: '#F5FCFF',
-          }}>
-              <ExampleComponent />
+     <View style={styles.view}>
+        <ExampleComponent />
         <View style={styles.container}> 
 
-          <ListViewDemo /> 
+          <ListViewDemo row= 'row 1'/> 
           
         </View> 
      </View>
@@ -57,10 +58,15 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',  
     alignItems: 'center', 
-    backgroundColor: '#F5FCFF', 
+
+  },
+  view: {
+    flex: 1,
+    backgroundColor :'#F5FCFF'
+  }
 
   }, 
-}); 
+); 
  
 
 AppRegistry.registerComponent('ProjetoBiologia', () => SimpleApp);
