@@ -11,7 +11,6 @@ const styles = StyleSheet.create({
       flex: 1,
       fontSize: 20,
       marginBottom: 2,
-      
   }
 });
 
@@ -22,7 +21,6 @@ class ListItemDemo extends React.Component {
         <View style={styles.row}>
             <Text style={styles.title}> {this.props.title} </Text>
         </View>
-
     );
   }
 }
