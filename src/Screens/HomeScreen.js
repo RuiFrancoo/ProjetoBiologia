@@ -2,6 +2,8 @@ import React from 'react';
 import { AppRegistry, Platform, Text, TextInput, View, StyleSheet } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import ListViewDemo from './../View/ListViewDemo';
+import SearchBarIOS from './SearchBarIOS';
+import SearchBarAND from './SearchBarAND';
 
 export default class HomeScreen extends React.Component {
   constructor(props) {
@@ -19,16 +21,23 @@ export default class HomeScreen extends React.Component {
     }
   };
 
+  _searchbar() {
+    if (Platform.OS === 'android') {
+      return (
+        <SearchBarAND />
+      );
+    } else if (Platform.OS === 'ios') {
+      return (
+        <SearchBarIOS />
+      );
+    }
+  }
+
   render() {
     const { navigate } = this.props.navigation;
-    const SearchBar = Platform.select({
-      ios: () => require('./SearchBarIOS'),
-      android: () => require('./SearchBarIOS')
-    })();
-    
     return (
      <View style={styles.view}>
-        <SearchBar />
+        {this._searchbar}
         <View style={styles.container}> 
           <ListViewDemo /> 
         </View> 
