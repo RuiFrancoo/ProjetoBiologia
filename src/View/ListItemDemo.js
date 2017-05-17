@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { View, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet, Text, TouchableHighlight } from 'react-native';
 
 const styles = StyleSheet.create({
   row: {
@@ -18,9 +18,12 @@ class ListItemDemo extends React.Component {
 
   render() {
     return (
+      <TouchableHighlight onPress={this._onPressRow.bind(this.rowID, rowData)}>
         <View style={styles.row}>
             <Text style={styles.title}> {this.props.title} </Text>
         </View>
+      </TouchableHighlight>
+
     );
   }
 }

@@ -37,7 +37,7 @@ export default class HomeScreen extends React.Component {
     const { navigate } = this.props.navigation;
     return (
      <View style={styles.view}>
-        {this._searchbar}
+        <SearchBarAND />
         <View style={styles.container}> 
           <ListViewDemo /> 
         </View> 
