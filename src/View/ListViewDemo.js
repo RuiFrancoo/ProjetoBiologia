@@ -14,9 +14,9 @@ const styles = StyleSheet.create({
   },
   textInput: {
     height: 40, 
-    borderColor: '#cecece', 
+    borderColor: 'white', 
     borderWidth: 0.5,
-    padding: 2,
+    marginTop: 4
   },
 });
 
@@ -69,7 +69,7 @@ class ListViewDemo extends React.Component {
 
   filterSearch(text) {
     const newData = data.filter(function(item){
-        const itemData = item.name.toUpperCase()
+        const itemData = item.code.toUpperCase() + item.name.toUpperCase()
         const textData = text.toUpperCase()
         return itemData.indexOf(textData) > -1
     })
@@ -89,6 +89,11 @@ class ListViewDemo extends React.Component {
             style={styles.textInput}
             onChangeText={(text) => this.filterSearch(text)}
             value={this.state.text}
+            autoCapitalize="none"
+            placeholder={"Procura aqui!!"}
+            placeholderTextColor={'white'}
+            selectionColor={'white'}
+            underlineColorAndroid={'white'}
         />
         <ListView
           enableEmptySections={true}
