@@ -22,11 +22,12 @@ export default class HomeScreen extends React.Component {
   };
 
   _searchbar() {
-    if (Platform.OS === 'android') {
+    console.log("Platform " + Platform.OS)
+    if (Platform.OS == 'android') {
       return (
         <SearchBarAND />
       );
-    } else if (Platform.OS === 'ios') {
+    } else if (Platform.OS == 'ios') {
       return (
         <SearchBarIOS />
       );
@@ -37,7 +38,7 @@ export default class HomeScreen extends React.Component {
     const { navigate } = this.props.navigation;
     return (
      <View style={styles.view}>
-        <SearchBarAND />
+        {this._searchbar()}
         <View style={styles.container}> 
           <ListViewDemo /> 
         </View> 
