@@ -1,6 +1,9 @@
 
 import React from 'react';
-import { View, ListView, StyleSheet, Text, TouchableHighlight } from 'react-native';
+import { View, TextInput, ListView, Platform, StyleSheet, Text, TouchableHighlight } from 'react-native';
+
+import SearchBarIOS from '../Screens/SearchBarIOS';
+import SearchBarAND from '../Screens/SearchBarAND';
 import ListItemDemo from "./ListItemDemo";
 import data from './aditivos'
 
@@ -8,6 +11,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     marginTop: 20,
+  },
+  textInput: {
+    height: 40, 
+    borderColor: '#cecece', 
+    borderWidth: 0.5,
+    padding: 2,
   },
 });
 
@@ -30,7 +39,7 @@ class ListViewDemo extends React.Component {
       });
   }
 
-  _getAditives() {
+  _getAditives() { 
     return new Promise(function(resolve, reject) {
       resolve(data);
     });
@@ -42,7 +51,7 @@ class ListViewDemo extends React.Component {
     this.ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
     
     this.state = {
-      dataSource: this.ds.cloneWithRows([]),
+      dataSource: this.ds.cloneWithRows([])
     };
   }
 
@@ -58,14 +67,37 @@ class ListViewDemo extends React.Component {
       .then((rows) => this._completion(rows));
   }
 
+  filterSearch(text) {
+    const newData = data.filter(function(item){
+        const itemData = item.name.toUpperCase()
+        const textData = text.toUpperCase()
+        return itemData.indexOf(textData) > -1
+    })
+    this.setState({
+        dataSource: this.state.dataSource.cloneWithRows(newData)
+    })
+  }
+
+  _searchbar() {
+
+  }
+
   render() {
     return (
-      <ListView
-        style={styles.container}
-        dataSource={this.state.dataSource}
-        renderRow={this._renderRow.bind(this)}
-        automaticallyAdjustContentInsets={true}
-      />
+      <View>
+        <TextInput 
+            style={styles.textInput}
+            onChangeText={(text) => this.filterSearch(text)}
+            value={this.state.text}
+        />
+        <ListView
+          enableEmptySections={true}
+          style={styles.container}
+          dataSource={this.state.dataSource}
+          renderRow={this._renderRow.bind(this)}
+          automaticallyAdjustContentInsets={true}
+        />
+      </View>
     );
   }
 

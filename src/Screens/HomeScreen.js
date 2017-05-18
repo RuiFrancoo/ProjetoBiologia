@@ -21,26 +21,12 @@ export default class HomeScreen extends React.Component {
     }
   };
 
-  _searchbar() {
-    console.log("Platform " + Platform.OS)
-    if (Platform.OS == 'android') {
-      return (
-        <SearchBarAND />
-      );
-    } else if (Platform.OS == 'ios') {
-      return (
-        <SearchBarIOS />
-      );
-    }
-  }
-
   render() {
     const { navigate } = this.props.navigation;
     return (
      <View style={styles.view}>
-        {this._searchbar()}
         <View style={styles.container}> 
-          <ListViewDemo /> 
+          <ListViewDemo style={styles.list}/> 
         </View> 
      </View>
     );
@@ -50,10 +36,16 @@ export default class HomeScreen extends React.Component {
 const styles = StyleSheet.create({ 
   container: { 
     flex: 1,
-    alignItems: 'center', 
+    alignItems: 'center',
+    backgroundColor :'#607d8b',
+
   },
   view: {
     flex: 1,
-    backgroundColor :'#F5FCFF',
+    backgroundColor :'#607d8b',
+  },
+  list: {
+    flex: 1,
+    backgroundColor :'#607d8b',
   },
 }); 

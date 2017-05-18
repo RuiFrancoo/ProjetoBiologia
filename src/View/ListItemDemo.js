@@ -27,7 +27,9 @@ const styles = StyleSheet.create({
   row: {
     flex: 1,
     alignItems: 'center',
-    backgroundColor :'#F5FCFF'
+    backgroundColor :'#F5FCFF',
+    margin: 4,
+    padding: 8,
   },
   title: {
       flex: 1,

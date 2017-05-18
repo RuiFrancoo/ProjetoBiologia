@@ -13,7 +13,7 @@ export default class SearchBarIOS extends Component {
     return (
       <TextInput
         style={{height: 40, backgroundColor: 'red', borderColor: 'gray', borderWidth: 0.5}}
-        onChangeText={(text) => this.setState({text})}
+        onChangeText={(text) => this.props.search(text)}
         value={this.state.text}
       />
     );
