@@ -2,8 +2,6 @@ import React from 'react';
 import { AppRegistry, Platform, Text, TextInput, View, StyleSheet } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import ListViewDemo from './../View/ListViewDemo';
-import SearchBarIOS from './SearchBarIOS';
-import SearchBarAND from './SearchBarAND';
 
 export default class HomeScreen extends React.Component {
   constructor(props) {
@@ -14,7 +12,7 @@ export default class HomeScreen extends React.Component {
   }
 
   static navigationOptions = {
-   title: 'Nutrients',
+   title: 'Aditivos',
     header: {
       style: { backgroundColor: '#9ccc65'},
       titleStyle: { color: '#fafafa'},
@@ -37,7 +35,7 @@ const styles = StyleSheet.create({
   container: { 
     flex: 1,
     alignItems: 'center',
-    backgroundColor :'#607d8b',
+    backgroundColor :'#DFDCE3',
 
   },
   view: {

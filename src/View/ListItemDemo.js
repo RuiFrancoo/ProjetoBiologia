@@ -32,7 +32,9 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     backgroundColor :'#F5FCFF',
-    margin: 4,
+    marginBottom: 4,
+    marginLeft: 4,
+    marginRight: 4,
     padding: 8,
   },
   title: {

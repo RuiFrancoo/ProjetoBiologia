@@ -10,13 +10,13 @@ import data from './aditivos'
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 20,
   },
   textInput: {
-    height: 40, 
-    borderColor: 'white', 
+    height: 50, 
+    backgroundColor: '#F7B733',
+    fontSize: 17,
+    borderColor: '#DFDCE3', 
     borderWidth: 0.5,
-    marginTop: 4
   },
 });
 
