@@ -33,12 +33,6 @@ class ListViewDemo extends React.Component {
   _getAditives() {
     return new Promise(function(resolve, reject) {
       resolve(data);
-    }).then((response) => {
-      var labels = [];
-      for(var key in response) {
-        labels.push(response[key].name);
-      }
-      return labels
     });
   }
 
@@ -75,12 +69,12 @@ class ListViewDemo extends React.Component {
     );
   }
 
-  _renderRow(rowData: string, sectionID: number, rowID: number) {
+  _renderRow(rowData, sectionID: number, rowID: number) {
     console.log('render row with data: ' + rowData);
     return (
       // <TouchableHighlight onPress={this._onPressRow.bind(this.rowID, rowData)}>
       <View>
-        <ListItemDemo title={rowData}></ListItemDemo>
+        <ListItemDemo aditive={rowData}></ListItemDemo>
       </View>
       // </TouchableHighlight>
     );
