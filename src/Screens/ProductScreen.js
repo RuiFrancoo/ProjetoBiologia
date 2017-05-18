@@ -22,10 +22,10 @@ export default class ProductScreen extends React.Component {
     const { navigate } = this.props.navigation;
     return (
      <View style={styles.view}>
-         <Text style={styles.title}>E 153</Text>
-         <Text style={styles.subtitle}> Carvão vegetal</Text>
-         <Text style={styles.description}>Produto natural resultante da queima de materiais vegetais e usado como corante preto.</Text>
-         <Text style={styles.warnings}>Provavelmente não trará riscos à saúde se a manufactura for adequada com bastante oxigénio para a combustão.</Text>
+         <Text style={styles.title}>{rowData.code}</Text>
+         <Text style={styles.subtitle}>{rowData.name}</Text>
+         <Text style={styles.description}>{rowData.category}</Text>
+         <Text style={styles.warnings}>{rowData.description}</Text>
      </View>
     );
   }
