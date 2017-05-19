@@ -48,14 +48,14 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   description: {
-    fontSize: 15,
-    paddingTop: 30,
+    fontSize: 23,
+    paddingTop: 5,
     textAlign: 'center',
   },
   warnings: {
     fontSize: 15,
     textAlign: 'center',
-    paddingTop: 10,
+    paddingTop: 25,
   }
 }); 
 
