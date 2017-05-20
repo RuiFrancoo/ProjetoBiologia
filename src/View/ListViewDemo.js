@@ -13,10 +13,11 @@ const styles = StyleSheet.create({
   },
   textInput: {
     height: 50, 
-    backgroundColor: '#F7B733',
+    backgroundColor: '#e57373',
     fontSize: 17,
-    borderColor: '#DFDCE3', 
+    borderColor: '#e57373', 
     borderWidth: 0.5,
+
   },
 });
 

@@ -14,7 +14,7 @@ export default class HomeScreen extends React.Component {
   static navigationOptions = {
    title: 'Aditivos',
     header: {
-      style: { backgroundColor: '#9ccc65'},
+      style: { backgroundColor: '#89DA59'},
       titleStyle: { color: '#fafafa'},
     }
   };
