@@ -9,7 +9,7 @@ const SimpleApp = StackNavigator({
   Product: { screen: ProductScreen },
 });
 
-AppRegistry.registerComponent('ProjetoBiologia', () => SimpleApp);
+AppRegistry.registerComponent('CheckYourFood', () => SimpleApp);
 
 //https://api.edamam.com/api/nutrition-data?app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}&ingr=1%20large%20apple
 //APP_ID = f5025c6a
