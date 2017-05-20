@@ -26,7 +26,6 @@ class ListItemDemo extends React.Component {
   }
 }
 
-
 const styles = StyleSheet.create({ 
   row: {
     flex: 1,
@@ -38,10 +37,10 @@ const styles = StyleSheet.create({
     padding: 8,
   },
   title: {
-      flex: 1,
-      fontSize: 20,
-      marginBottom: 2,
-      textAlign: 'center',
+    flex: 1,
+    fontSize: 20,
+    marginBottom: 2,
+    textAlign: 'center',
   },
   subtitle: {
     fontSize: 25,

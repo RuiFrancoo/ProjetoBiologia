@@ -23,6 +23,7 @@ export default class HomeScreen extends React.Component {
     const { navigate } = this.props.navigation;
     return (
      <View style={styles.view}>
+        <Text style={styles.title}>Oops! Não Há Resultados!</Text>
         <View style={styles.container}> 
           <ListViewDemo style={styles.list}/> 
         </View> 
@@ -33,7 +34,7 @@ export default class HomeScreen extends React.Component {
 
 const styles = StyleSheet.create({ 
   container: { 
-    backgroundColor :'#DFDCE3',
+    backgroundColor :'transparent',
   },
   view: {
     flex: 1,
@@ -41,6 +42,16 @@ const styles = StyleSheet.create({
   },
   list: {
     flex: 1,
-    backgroundColor :'#607d8b',
+    backgroundColor :'transparent',
+    position: 'absolute',
+  },
+  title: {
+    flex: 1,
+    top: 50,
+    padding: 16,
+    fontSize: 24,
+    backgroundColor :'transparent',
+    position: 'absolute',
+    alignItems:'center',
   },
 }); 
