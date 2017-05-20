@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { View, TextInput, ListView, Platform, StyleSheet, Text, TouchableHighlight } from 'react-native';
 
@@ -17,7 +16,7 @@ const styles = StyleSheet.create({
     fontSize: 17,
     borderColor: '#e57373', 
     borderWidth: 0.5,
-
+    padding: 16
   },
 });
 
@@ -87,18 +86,17 @@ class ListViewDemo extends React.Component {
     return (
       <View>
         <TextInput 
-            style={styles.textInput}
+            style={[styles.textInput, {color: 'white'}]}
             onChangeText={(text) => this.filterSearch(text)}
             value={this.state.text}
             autoCapitalize="none"
-            placeholder={"Procura aqui!!"}
+            placeholder={"Procura aqui!"}
             placeholderTextColor={'white'}
             selectionColor={'white'}
             underlineColorAndroid={'white'}
         />
         <ListView
           enableEmptySections={true}
-          style={styles.container}
           dataSource={this.state.dataSource}
           renderRow={this._renderRow.bind(this)}
           automaticallyAdjustContentInsets={true}
@@ -110,11 +108,7 @@ class ListViewDemo extends React.Component {
   _renderRow(rowData, sectionID: number, rowID: number) {
     console.log('render row with data: ' + rowData);
     return (
-      // <TouchableHighlight onPress={this._onPressRow.bind(this.rowID, rowData)}>
-      <View>
-        <ListItemDemo aditive={rowData}></ListItemDemo>
-      </View>
-      // </TouchableHighlight>
+        <ListItemDemo aditive={rowData} />
     );
   }
 
@@ -127,6 +121,5 @@ class ListViewDemo extends React.Component {
     console.log("press " + rowID);
   }
 }
-
 
 export default ListViewDemo;
